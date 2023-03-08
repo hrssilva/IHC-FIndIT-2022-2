@@ -1,0 +1,13 @@
+import "./data-manage.proto";
+
+service Provider {
+    rpc RegisterMap (RegisterRequest) returns (RegisterReply) {}
+}
+
+message RegisterRequest {
+    required FinditMap map = 1;
+}
+
+message RegisterReply {
+    required bool success = 1;
+}

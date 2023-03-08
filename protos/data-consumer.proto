@@ -1,0 +1,14 @@
+import "./data-manage.proto";
+
+service Consumer {
+    rpc RecieveMap (RecieveRequest) returns (RecieveReply) {}
+}
+
+message RecieveRequest {
+    required string name = 1;
+}
+
+message RecieveReply {
+    required bool success = 1;
+    optional FinditMap map = 2;
+}
