@@ -1,7 +1,0 @@
-/*
-    A map data structure to be used in place of a json
-*/
-message FinditMap {
-    string name = 1;
-
-}

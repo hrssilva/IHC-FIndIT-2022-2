@@ -1,14 +1,15 @@
-import "./data-manage.proto";
+syntax = "proto3";
+import "data-definitions.proto";
 
 service Consumer {
     rpc RecieveMap (RecieveRequest) returns (RecieveReply) {}
 }
 
 message RecieveRequest {
-    required string name = 1;
+    string name = 1;
 }
 
 message RecieveReply {
-    required bool success = 1;
+    bool success = 1;
     optional FinditMap map = 2;
 }

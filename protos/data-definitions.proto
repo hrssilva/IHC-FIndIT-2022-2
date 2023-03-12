@@ -1,0 +1,32 @@
+syntax = "proto3";
+/*
+    A map data structure to be used in place of a json
+*/
+message FinditMap {
+    int32 id = 1;
+    string name = 2;
+    repeated PartialMap maps=3;
+}
+
+message PartialMap {
+    int32 id = 1;
+    string name = 2;
+    string image_link = 3;
+    MapNode nodes = 4;
+    MapEdge edges = 5;
+}
+
+message MapNode {
+    int32 id = 1;
+    string name = 2;
+    int32 type = 3;
+    float x = 4;
+    float y = 5;
+}
+
+message MapEdge {
+    int32 id = 1;
+    float from_node = 2;
+    float to_node = 3;
+    int32 distance = 4;
+}
